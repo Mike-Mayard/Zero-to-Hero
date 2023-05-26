@@ -1,1 +1,5 @@
-The very first program I and perhaps many others have writtin in Python, Hello World!
+# Michael Mayard
+# 5/26/2023
+# The very first program that I and perhaps many others have written in Python, Hello World!
+
+print('Hello World!')
