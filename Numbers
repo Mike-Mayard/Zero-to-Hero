@@ -1,0 +1,15 @@
+# Michael Mayard
+# 5/27/2023
+# Variables and Data Types
+
+# Perform simple arithmetic operations on sets of numbers resulting in an answer of 42 then output result to console.
+print(11+31)
+print(100-58)
+print(168/4)
+print(21*2)
+
+# Assign a number to the fav_num variable.
+fav_num = 42
+
+# Compose a message utilizing the contents of fav_num variable converted to a string then output to console.
+print("My favorite number also happens to be the answer to life, " + str(fav_num) + "!")
