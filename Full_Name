@@ -1,0 +1,20 @@
+# Michael Mayard
+# 5/27/2023
+# Variables and Data Types
+
+# Assign strings to the variables first_name and last_name.
+first_name = "michael"
+last_name = "mayard"
+
+# Use f string to combine the strings of the previous two variables and assign the result to the variable full_name.
+full_name = f"{first_name} {last_name}"
+
+# Output to console the contents of the variable full_name.
+print(full_name)
+
+# Use f string to compose messages using variable contents and the title method to properly case then output to console.
+print (f"Hello, {full_name.title()}!")
+
+# Assign the f string message to a variable then output to console.
+greeting = f"Hello, {full_name.title()}!"
+print(greeting)
