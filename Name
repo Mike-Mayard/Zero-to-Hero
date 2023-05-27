@@ -1,0 +1,15 @@
+# Michael Mayard
+# 5/27/2023
+# Variables and Data Types
+
+# Assign a string to the variable name.
+name = "michael mayard"
+
+# Use the title method on the variable to upper case the first letter of each word in the string then output to console.
+print(name.title())
+
+# Use the upper method on the variable to upper case all letters of each word in the string then output to console.
+print(name.upper())
+
+# Use the lower method on the variable to lower case all letters of each word in the string then output to console.
+print(name.lower())
