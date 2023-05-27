@@ -1,0 +1,9 @@
+# Michael Mayard
+# 5/27/2023
+#Variables and Data Types
+
+greeting = "Hello World!"
+print(greeting)
+
+greeting = "How are you doing today?"
+print(greeting)
