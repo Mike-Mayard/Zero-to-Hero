@@ -2,8 +2,14 @@
 # 5/27/2023
 #Variables and Data Types
 
+# Assign the string Hello World! to a variable named greeting.
 greeting = "Hello World!"
+
+# Output to the console what is assigned to the variable greeting.
 print(greeting)
 
+# Reassign the variable greeting with a new string.
 greeting = "How are you doing today?"
+
+# Output to the console the latest or current string assigned to the variable greeting.
 print(greeting)
