@@ -1,0 +1,48 @@
+# Michael Mayard
+# 5/28/2023
+# Lists
+
+# Create a list using names.
+names = ['sonia', 'tanya', 'jennifer', 'beyonce']
+print(names)
+
+# Output to console a unique message to each person within the list of names.
+print(f" Hello {names[0].title()}, nice to meet you.")
+print(f" Hello {names[1].title()}, nice to meet you.")
+print(f" Hello {names[2].title()}, nice to meet you.")
+print(f" Hello {names[3].title()}, nice to meet you.")
+
+# Edit the list by reassigning the second index with a new name.
+names[1] = 'tiffany'
+print(names)
+
+# Add a new name to the existing list.
+names.append('Stacy')
+print(names)
+
+# Add a new name at a specific position.
+names.insert(2, 'Hilary')
+print(names)
+
+# Remove an item from the list.
+del names[5]
+print(names)
+
+# Remove an item by position from the list that can still be utilized.
+dropped_name = names.pop(2)
+print(dropped_name)
+
+# Remove an item by value from the list.
+names.remove('jennifer')
+print(names)
+
+# Sort the list alphanumerically.
+names.sort()
+print(names)
+
+# Reverse the items in the list.
+names.reverse()
+print(names)
+
+# Obtain the length of the items in the list.
+print(len(names))
