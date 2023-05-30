@@ -1,0 +1,16 @@
+# Michael Mayard
+# 5/29/2023
+# Tuples
+
+# Create a tuple.
+my_tuple= (11,22,33,44,55)
+print(my_tuple)
+
+# Tuples are immutable. Instead of overwriting, you can create a new tuple and reassign it to a variable.
+population = (2000,)
+for people in population:
+    print(f"The population in the year 20xx was {people}")
+
+population = (3000,)
+for people in population:
+    print(f"The current population is {people}")
