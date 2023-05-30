@@ -1,0 +1,31 @@
+# Michael Mayard
+# 5/29/2023
+# Lists Continued
+
+# Iterate through a list and output each item within to the console.
+genres = ['action', 'adventure', 'science fiction', 'comedy', 'fantasy']
+for genre in genres:
+    print(genre)
+
+# Utilize an item from the list to output a specified message.
+print(f"{genres[4].title()} is my favorite genre!")
+
+# Create a numbered list using the range function and assign the list to a variable.
+numbers = list(range(1,11))
+print(numbers)
+
+# Create an odd numbered list using the range function's step argument. Starts the list at 1 and increments by two.
+odd_numbers = list(range(1, 22, 2))
+print(odd_numbers)
+
+# Obtain simple statistics using the elements of a list. The minimum value, maximum value, and sum of all elements.
+print(min(numbers))
+print(max(numbers))
+print(sum(numbers))
+
+# Print to console a sliced version of a list.
+print(genres[0:2])
+
+# Copy a list.
+friends_genres = genres[:]
+print(friends_genres)
