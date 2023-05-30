@@ -1,0 +1,62 @@
+# Michael Mayard
+# 5/30/23
+# If statements
+
+# Perform a specific action if a specified condition is met.
+clothes = ['shirt', 'pants', 'jacket', 'hat']
+for outfit in clothes:
+    if outfit == 'jacket':
+        print(outfit.upper())
+    else:
+        print(outfit.title())
+
+# Perform a specific action if a specified condition IS NOT met.
+service = False
+if not service:
+    print('No shirt, no shoes, no service.')
+else:
+    print('Excellent, you are fully clothed.')
+
+# Checking multiple conditions with numbers.
+price = [200, 300, 400, 500]
+print(price[0] > 100 and price[1] < 400)
+
+# Check if a value is in a list.
+print(500 in price)
+
+# Check if a value is not in a list.
+if 600 not in price:
+    print("There is nothing in this store that costs that much")
+
+# Performing specific actions after checking multiple conditions. If, elif, else statement.
+age = 37
+if age < 2:
+    stage = 'baby'
+    print(f"Your stage of life is that of a {stage}")
+elif age < 4:
+    stage = 'toddler'
+    print(f"Your stage of life is that of a {stage}")
+elif age < 13:
+    stage = 'kid'
+    print(f"Your stage of life is that of a {stage}")
+elif age < 20:
+    stage = 'teenager'
+    print(f"Your stage of life is that of a {stage}")
+elif age < 65:
+    stage = 'adult'
+    print(f"Your stage of life is that of an {stage}")
+else:
+    stage = 'senior'
+    print(f"Your stage of life is that of a {stage}")
+
+# Printing correct ordinal numbers utilizing if, elif, else statements.
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for number in numbers:
+    if number == 1:
+        print(f"\n {number}st")
+    elif number == 2:
+        print(f"\n {number}nd")
+    elif number == 3:
+        print(f"\n {number}rd")
+    else:
+        print(f"\n {number}th")
