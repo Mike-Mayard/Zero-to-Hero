@@ -1,0 +1,39 @@
+# Michael Mayard
+# 5/31/23
+# Dictionaries
+
+# Create a simple dictionary.
+game = {'name': 'Final Fantasy', 'genre': 'MMORPG', 'platform': 'PC'}
+print(game)
+print(game['name'])
+print(game['genre'])
+
+# Add new key-value pairs to existing dictionary.
+game['expansions'] = 4
+game['active players'] = '30M'
+print(game)
+
+# Remove key-value pairs from existing dictionary.
+del game['active players']
+print(game)
+
+# Use get() method to retrieve values that may not exist in the current dictionary.
+game_active = game.get('active players', 'Current value is unknown')
+print(game_active)
+
+# Iterate through key value pairs in existing dictionary.
+for k, v in game.items():
+    print(f"\nKey: {k}")
+    print(f"Value: {v}")
+
+# Iterate through the keys only.
+for info in game.keys():
+    print("\n " + str(info))
+
+# Iterate through the values only.
+for attribute in game.values():
+    print("\n " + str(attribute))
+
+# Sort the keys.
+for k in sorted(game.keys()):
+    print(k)
