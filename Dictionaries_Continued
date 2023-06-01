@@ -1,0 +1,58 @@
+# Michael Mayard
+# 5/31/23
+# Dictionaries Continued
+
+# Create an empty list to append with a dictionary.
+monsters = []
+
+# Create dictionary elements then add to the dictionary.
+for monster in range(10):
+    new_monster = {'size': 'large', 'color': 'black', 'strength': 'powerful'}
+    monsters.append(new_monster)
+
+# Output the list with appended dictionary.
+for monster in monsters:
+    print(monsters)
+print("...")
+
+# Display how many monsters have been created.
+print(f"Total number of monsters spawned: {len(monsters)}")
+
+# Modify the first two monsters.
+for monster in monsters[:2]:
+    if monster['size'] == 'large':
+        monster['size'] = 'medium'
+        monster['color'] = 'white'
+        monster['strength'] = 'strong'
+
+# Display the first two monsters.
+for monster in monsters[:2]:
+    print(monster)
+
+# Create a dictionary about an ordered pizza. (Lists within a dictionary).
+pizza = {
+    'crust': 'stuffed',
+    'toppings': ['pepperoni', 'sausage', 'extra cheese']
+}
+
+# Display the order.
+print(f"Thank you for your order for a {pizza['crust']}-crust pizza with the following toppings:")
+for topping in pizza['toppings']:
+    print(f"\t{topping}")
+
+# Create a nested dictionary.
+content_creators = {
+    'mdood': {
+        'first': 'maximillian', 'last': 'dood', 'platform': 'youtube'
+    },
+    'khsensei3': {'first': 'kh', 'last': 'sensei3', 'platform': 'twitch'}
+}
+
+# Display the nested dictionary info.
+for creator, creator_info in content_creators.items():
+    print(f"\nCreator: {creator}")
+    full_name = f"{creator_info['first']} {creator_info['last']}"
+    platform = creator_info['platform']
+
+    print(f"\tFull Name: {full_name.title()}")
+    print(f"\tPlatform: {platform.title()}")
