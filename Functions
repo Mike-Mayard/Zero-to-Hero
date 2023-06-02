@@ -1,0 +1,72 @@
+# Michael Mayard
+# 6/2/23
+# Functions
+
+# Define a function with passable arguments.
+
+def favorite_game(game, year):
+    print(f" My favorite game is {game.title()} released in {year}!")
+
+
+favorite_game('Final Fantasy', '2014')
+
+
+# Define a function that returns a dictionary.
+def fav_game(player, game):
+    person = {'name': player, 'game': game}
+    return person
+
+
+gamer = fav_game('Mike', 'Final Fantasy')
+print(gamer)
+
+
+# Program that displays elements of a list with user's input and the ability to quit.
+
+# Define a function that creates and returns elements of a list as dictionaries with user input.
+def make_album(artist, name, songs):
+    album_info = {'artist': artist.title(), 'Album name': name.title(), '# of songs': songs}
+    return album_info
+
+
+# Create an empty list to be updated and ask for user input with the ability to quit at any time.
+albums = []
+user_input = True
+while user_input:
+    print("\nPlease enter the artist's name or type q to quit: ")
+    print("Please enter the album title or type q to quit: ")
+    print("Please enter the number of songs on the album or type q to quit: ")
+    print("In order for me to display album info, you need to enter values for all three.")
+
+    album_artist = input("\nArtist name: ")
+    if album_artist == 'q':
+        print("You have not provided any information. No album information to display. Ending program.")
+        break
+
+    album_title = input("Album title: ")
+    if album_title == 'q':
+        print("You have not provided enough information. No album information to display. Ending program.")
+        break
+
+    album_songs = str(input("# of songs: "))
+    if album_songs == 'q':
+        print("You have not provided enough information. No album information to display. Ending program.")
+        break
+
+    info = make_album(album_artist, album_title, album_songs)
+    albums.append(info)
+
+# Ask the user if they would like to add additional information.
+    more_info = input("\nWould you like to add additional album info? (yes/no): ")
+    if more_info == 'no':
+        user_input = False
+
+# Once all information is gathered, print out the elements of the list.
+    if albums:
+        print("\n--- Album Information ---")
+        for album in albums:
+            print(f"\nArtist: {album['artist']}")
+            print(f"Album: {album['Album name']}")
+            print(f"# of songs: {album['# of songs']}")
+    else:
+        print("You have not provided enough information. Therefore, I have no album information to display.")
