@@ -1,0 +1,59 @@
+# Michael Mayard
+# 6/1/23
+# User Input and While Loops
+
+# Print a message utilizing input received from the user.
+name = input("Please enter your name so that we may greet you properly: ")
+print(f"Good evening, {name}.")
+
+# Ask the user for a numerical value.
+fav_num = int(input("Please tell me your favorite number: "))
+print(f"So, {fav_num} is your favorite number? Interesting.")
+
+# Determine if a number is even or odd.
+number = int(input("Please enter a number and I will tell you if it is even or odd: "))
+if number % 2 == 0:
+    print(f"Your number, {number}, is even!")
+else:
+    print(f"Your number, {number}, is odd!")
+
+# While loops. Let the user decide when to quit the program.
+prompt = "I would like you to star in my next story."
+prompt += " Please tell me your name or enter quit to end the program: "
+
+name = ""
+while name.lower() != 'quit':
+    name = input(prompt)
+    break
+if name.lower() != 'quit':
+    print(f"The legend of {name} begins with....")
+else:
+    print(f"Perhaps another time then. Let me know if you change your mind!")
+
+# Using continue in a loop. Skip even numbers and print odd numbers (negative).
+num = 0
+while num > -10:
+    num -= 1
+    if num % -2 == 0:
+        continue
+
+    print(num)
+
+# Filling a dictionary with user input. Utilize flags and while loop.
+responses = {}
+
+polling_active = True
+
+while polling_active:
+    name = input("\nPlease tell me your name: ")
+    response = input("What is your dream occupation?: ")
+
+    responses[name] = response
+
+    reiterate = input("Would anyone else like to provide input? (yes/no): ")
+    if reiterate == 'no':
+        polling_active = False
+
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(f"{name.title()} would like to be a {response.title()}.")
