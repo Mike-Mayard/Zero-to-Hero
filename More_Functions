@@ -1,0 +1,42 @@
+# Michael Mayard
+# 6/2/23
+# Functions Continued
+
+# Import a module to use at end of file.
+
+import Functions
+
+
+# Define a function that accepts an arbitrary number of arguments. Tuple version.
+def computer(*parts):
+    print("\nBuilding a computer with the following parts:")
+    for part in parts:
+        print(f"- {part}")
+
+
+computer('motherboard', 'gpu', 'ram', 'fan')
+computer('motherboard', 'ram')
+
+
+# Define a function that mixes positional and arbitrary arguments.
+def make_sandwich(size, *toppings):
+    print(f"\nMaking a {size} sandwich with the following toppings:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+
+make_sandwich('6 - inch', 'ham', 'egg', 'cheese')
+
+
+# Define a function that mixes positional and arbitrary arguments. Dictionary version.
+def build_profile(first, last, **user_info):
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+
+user_profile = build_profile('Mike', 'Mayard', Age=str(36), Nationality='American', Sex='Male')
+print(f"\n{user_profile}")
+
+
+Functions.fav_game('Mike', 'Final Fantasy')
