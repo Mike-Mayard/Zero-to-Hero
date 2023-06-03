@@ -1,0 +1,72 @@
+# Michael Mayard
+# 6/3/23
+# Classes
+
+# Create a class about restaurants. Exercise 9-1.
+class Restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.name = restaurant_name
+        self.type = cuisine_type
+
+    def describe_restaurant(self):
+        print(f"\n{self.name}, home to the world famous {self.type}!")
+
+    def open_restaurant(self):
+        print(f"{self.name} is now open!")
+
+
+restaurant = Restaurant('Outback Steakhouse', 'Bloomin Onion')
+print(restaurant.name)
+print(restaurant.type)
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
+
+# Create three restaurants instances and print descriptions of each. Exercise 9-2.
+restaurant_1 = Restaurant('Red Lobster', 'Lobster and Mac')
+restaurant_2 = Restaurant('Mr. Ramen', 'Karaage Ramen')
+restaurant_3 = Restaurant('Anthony\'s', 'New York Style Pizza')
+restaurant_1.describe_restaurant()
+restaurant_2.describe_restaurant()
+restaurant_3.describe_restaurant()
+
+
+# Create a class for user profiles. Exercise 9-3.
+class User:
+    def __init__(self, first_name, last_name, age, sex):
+        self.name = f"{first_name} {last_name}"
+        self.age = age
+        self.sex = sex
+
+    def describe_user(self):
+        print(f"\n--- User Profile ---")
+        print(f"{self.name}")
+        print(f"{self.age} years old")
+        print(f"{self.sex}")
+
+    def greet_user(self):
+        print(f"\nWelcome, {self.name}, you've got mail.")
+
+
+user_1 = User('Mike', 'Mayard', '36', 'Male')
+user_2 = User('Desmond', 'Johnson', '35', 'Male')
+user_1.describe_user()
+user_1.greet_user()
+user_2.describe_user()
+user_2.greet_user()
+
+
+# Create a child class called IceCreamStand and attribute list of flavors. Exercise 9-6.
+class IceCreamStand(Restaurant):
+    def __init__(self, restaurant_name, cuisine_type, flavors):
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = flavors
+
+    def display_flavors(self):
+        print(f"\n--- Flavor Listing ---")
+        for flavor in self.flavors:
+            print(flavor)
+
+
+stand_1 = IceCreamStand('Baskin Robbins', 'Ice Cream Cone', ['vanilla', 'chocolate', 'strawberry'])
+stand_1.describe_restaurant()
+stand_1.display_flavors()
