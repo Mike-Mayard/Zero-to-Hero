@@ -1,0 +1,48 @@
+# Michael Mayard
+# 6/3/23
+# Classes Continued
+
+from random import randint, choice
+
+
+# Create a die rolling program with classes. Exercise 9-13.
+class Die:
+    def __init__(self, sides=6, attempts=1):
+        self.sides = sides
+        self.attempts = attempts
+
+    def roll_die(self):
+        print(f"\n--- Roll Results ---")
+        for attempt in range(self.attempts):
+            roll = randint(1, self.sides)
+
+            print(f" You rolled a {roll}")
+
+
+side_6 = Die(6)
+side_6.roll_die()
+side_10 = Die(10, 10)
+side_10.roll_die()
+side_20 = Die(20, 10)
+side_20.roll_die()
+
+
+# Create a lottery program. Exercise 9-14.
+lotto = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'a', 'z', 'm', 'd']
+winner = []
+my_ticket = []
+tries = 1
+for element in range(4):
+    winner.append(choice(lotto))
+    my_ticket.append(choice(lotto))
+
+print(f"\nThe winning ticket combination is: {winner}!")
+while my_ticket != winner:
+    tries += 1
+    my_ticket = []
+    for element in range(4):
+        my_ticket.append(choice(lotto))
+
+    if my_ticket == winner:
+        print(f"\nYour ticket {my_ticket} matches the winning ticket {winner}! Congratulations!")
+        print(f"You have succeeded after {tries} tries.")
