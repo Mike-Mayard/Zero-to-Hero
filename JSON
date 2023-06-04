@@ -1,0 +1,20 @@
+# Michael Mayard
+# 6/4/23
+# JSON objects for Storing Data
+
+import json
+# Store user input as a JSON object to call later. In this case, the user's favorite number. Exercise 10-11.
+print("\nIf you tell me your favorite number, I will remember it for when you next ask me.")
+fav_num = input("Favorite number?: ")
+
+filename = 'fav_num.json'
+with open(filename, 'w') as f:
+    json.dump(fav_num, f)
+
+with open(filename) as f:
+    number = json.load(f)
+    response = input("I remembered your number! Would you like to hear it? (yes/no): ")
+    if response == 'no':
+        print("Too bad. Maybe next time!")
+    else:
+        print(f"Great! Your favorite number is {number}!")
