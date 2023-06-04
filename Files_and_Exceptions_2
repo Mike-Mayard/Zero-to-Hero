@@ -1,0 +1,39 @@
+# Michael Mayard
+# 6/4/23
+# Files and Exceptions
+
+# Write a program that asks the user for two numbers to add together and print result. Catch ValueErrors. Exercise 10-6.
+
+print("\nGive me two numbers, and I will add them")
+
+num_1 = input("First number: ")
+num_2 = input("Second number: ")
+try:
+    ans = int(num_1) + int(num_2)
+except ValueError:
+    print("In order for me to print the result of adding numbers, you must give the numbers in integer form.")
+else:
+    print(f" {num_1} + {num_2} = {ans}.")
+
+# Modify program 10-6 to allow users to input the correct types of input. Exercise 10-7.
+print("\n Give me three numbers, and I will multiply them.")
+print("Enter q to quit at anytime.")
+
+while True:
+
+    number_1 = input("First number: ")
+    if number_1 == 'q':
+        break
+    number_2 = input("Second number: ")
+    if number_2 == 'q':
+        break
+    number_3 = input("Third number: ")
+    if number_3 == 'q':
+        break
+
+    try:
+        answer = int(number_1) * int(number_2) * int(number_3)
+    except ValueError:
+        print("\nPlease enter  all three numbers in integer form")
+    else:
+        print(f"\n{number_1} * {number_2} * {number_3} = {answer}.")
