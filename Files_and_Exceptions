@@ -1,0 +1,59 @@
+# Michael Mayard
+# 6/4/23
+# Files and Exceptions
+
+# Reading from a file and displaying three different ways. Exercise 10-1.
+file_name = 'learning_python.txt'
+
+with open(file_name) as file_object:
+    content = file_object.read()
+    print(content)
+
+with open(file_name) as file_object:
+    for line in file_object:
+        print(line)
+
+with open(file_name) as file_object:
+    lines = file_object.readlines()
+
+for line in lines:
+    print(line)
+
+# Read in contents from a file and replace certain words. Exercise 10-2.
+with open(file_name) as file_object:
+    lines = file_object.readlines()
+
+    for line in lines:
+        print(line.replace('Python', 'C'))
+
+# Ask the user for their name and create a file adding their name to a list. Exercise 10-3.
+name = input("Good Morning, What is your name sir/ma'am?: ")
+
+filename = 'guest.txt'
+
+with open(filename, 'w') as file_object:
+    file_object.write(f"{name.title()} has been added to the list.\n")
+
+with open(filename) as file_object:
+    contents = file_object.read()
+    print(contents)
+
+# Ask for multiple usernames then append to a list.
+filename_1 = 'guest_book.txt'
+
+greeting = True
+while greeting:
+    name = input("Hello, may I have your name please?: ")
+    print(f"Welcome, {name.title()}, please wait while I add you to the guest list.")
+    with open(filename_1, 'a') as file_object:
+        file_object.write(f"{name.title()}\n")
+    print(f"\nThank you for waiting, {name.title()}. You are now on the list. Please come in and enjoy.")
+
+    more = input("I have confirmed the last guest presently in line. Should I expect any more? (yes/no): ")
+    if more == 'no':
+        greeting = False
+
+with open(filename_1) as file_object:
+    guest_list = file_object.read()
+    print("\n--- Guest List ---")
+    print(guest_list)
