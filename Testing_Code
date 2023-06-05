@@ -1,0 +1,17 @@
+# Michael Mayard
+# 6/5/2023
+# Testing Code
+
+# Test the code from City_Functions.py
+import unittest
+from City_Functions import city_country
+
+
+class CityCountryTest(unittest.TestCase):
+    def test_city_country(self):
+        formatted_place = city_country('brooklyn', 'new york')
+        self.assertEqual(formatted_place, 'Brooklyn, New York')
+
+
+if __name__ == '__main__':
+    unittest.main()
