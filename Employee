@@ -1,0 +1,23 @@
+# Michael Mayard
+# 6/5/2023
+# Testing Code
+
+# Write a class to test. Exercise 11-3.
+class Employee:
+    def __init__(self, firstname, lastname, salary):
+        self.name = f"\nName: {firstname.title()} {lastname.title()}"
+        self.salary = salary
+
+    def give_raise(self, bonus='5000'):
+        if bonus:
+            new_salary = int(self.salary) + int(bonus)
+        else:
+            new_salary = int(self.salary) + int('5000')
+        return str(new_salary)
+
+
+employee_1 = Employee('mike', 'mayard', '85000')
+print(employee_1.name)
+print(employee_1.salary)
+employee_salary = employee_1.give_raise('10000')
+print(employee_salary)
