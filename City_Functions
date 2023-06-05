@@ -1,0 +1,16 @@
+# Michael Mayard
+# 6/5/2023
+# Testing Code
+
+# Create a function to test in another file. Exercise 11-2.
+def city_country(city, country, population=''):
+
+    if population:
+        place = f"{city.title()}, {country.title()}, {population}"
+    else:
+        place = f"{city.title()}, {country.title()}"
+    return place
+
+
+# print(city_country('brooklyn', 'new york'))
+# print(city_country('brooklyn', 'new york', '20000'))
