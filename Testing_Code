@@ -5,12 +5,32 @@
 # Test the code from City_Functions.py
 import unittest
 from City_Functions import city_country
+from Employee import Employee
 
 
 class CityCountryTest(unittest.TestCase):
     def test_city_country(self):
         formatted_place = city_country('brooklyn', 'new york')
         self.assertEqual(formatted_place, 'Brooklyn, New York')
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+# Test the code from Employee.py
+class TestEmployee(unittest.TestCase):
+    def setUp(self):
+        salary = '85000'
+        self.salary = Employee('Mike', 'Mayard', salary)
+
+    def test_give_default_raise(self):
+        new_salary = self.salary.give_raise()
+        self.assertEqual(new_salary, '90000')
+
+    def test_give_custom_raise(self):
+        new_salary = self.salary.give_raise('10000')
+        self.assertEqual(new_salary, '95000')
 
 
 if __name__ == '__main__':
