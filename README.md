@@ -1,2 +1,2 @@
 # Zero-to-Hero
-This repository will showcase my Python coding progress. I will be reading and completing the assignments within the Python Crash Course: 2nd Edition's 20 Chapters as well as original works as I grow in skill and when inspiration takes hold.
+This repository will showcase my Python coding progress. I will be reading and completing the assignments within the first 11 chapters of the Python Crash Course: 2nd Edition. The project-based second half, Chapters 12-20, I will be commiting into their own grouping repositories. Chapters 12-14 is a Space Invaders game replica. Chapters 15-17 covers Data Visualization. Finally, Chapters 18-20 are about Web Applications.
